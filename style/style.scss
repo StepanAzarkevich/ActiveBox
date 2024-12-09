@@ -16,16 +16,6 @@ $color3: #6C7279;
     width: 100%;
     padding: 0 15px;
     margin: 0 auto;
-
-    @media (max-width:1024px) {
-        max-width: 984px;
-        padding: 0 20px;
-    }
-
-    @media (max-width:320px) {
-        max-width: 320px;
-        padding:0;
-    }
 }
 
 @mixin font($font-size, $line-height, $font-family, $color) {
@@ -42,11 +32,20 @@ $color3: #6C7279;
     z-index: 1;
     width: 100%;
 
+    @media (max-width:767px){
+        padding: 15.39px 0;
+        
+    }
+
 
     &__container {
         align-items: center;
         justify-content: space-between;
         display: flex;
+
+        @media (max-width:767px){
+            padding: 0 20px;
+         }
 
         &::after {
             content: "";
@@ -60,23 +59,52 @@ $color3: #6C7279;
 
             @media (max-width:1024px) {
             width: 970px;
+            }
 
+            @media (max-width:767px){
+                   border-bottom: 0;
+                }
             }
         }
-    }
+    
 
 
     &__wrapper-icon {
         max-width: 184px;
         width: 100%;
         display: flex;
+
+        @media (max-width:1024px) {
+            width: 193.86px;
+            }
+
+        @media (max-width:767px){
+            width: 103.47px;
+            }
     }
+
+    &__menu {
+        display: none;
+
+        @media (max-width:767px) {
+            background: none;
+            border: none;
+            display: flex;
+            padding: 0 15px;
+        }
+    }
+
+
 
 
 
     &__list {
         display: flex;
         list-style-type: none;
+
+        @media (max-width:767px) {
+            display: none;
+        }
     }
 
 
@@ -89,7 +117,7 @@ $color3: #6C7279;
         }
 
 
-        @media (max-width:320px) {
+        @media (max-width:767px) {
             display: none;
         }
     }
@@ -117,17 +145,17 @@ $color3: #6C7279;
         }
 
         @media (max-width:1024px){
-            @include font(12px, 14px, $font, $color1);
+            min-width: max-content;
         }
 
     }
     
 
 
-    &__last-wrapper-icon {
+    &__menu{
         display: none;
 
-        @media (max-width:320px) {
+        @media (max-width:767px) {
             display: flex;
             margin-top: 19px;
         }
@@ -156,20 +184,50 @@ $color3: #6C7279;
         top: 0;
     }
 
+    @media (max-width:1024px){
+        padding:257px 0 126px;
+        margin-bottom: 81px;
+    }
+
+    @media (max-width:767px) {
+        padding: 106px 0 52px;
+        margin-bottom: 46px;
+    }
+
     &__title {
         @include font(64px, 75px, $font, $color1);
         text-align: center;
         margin-bottom: 31px;
         text-transform: uppercase;
+
+        @media (max-width:1024px){
+            @include font(48px, 56px, $font, $color1);
+            margin-bottom: 63px;
+        }
+
+        @media (max-width:767px){
+            @include font(36px, 42px, $font, $color1);
+        }
+
     }
 
     &__text {
         @include font(24px, 28px, $font, $color1);
-        margin: 0 auto;
+        margin: 0 auto 82px;
         text-align: center;
-        margin-bottom: 82px;
         max-width: 999px;
         width: 100%;
+
+        @media (max-width:1024px){
+            @include font(18px, 21px, $font, $color1);
+            max-width: 777px;
+            margin: 0 auto 89px;
+        }
+
+        @media (max-width:767px){
+            @include font(14px, 16px, $font, $color1);
+            max-width: 100%;
+        }
     }
 
     &__button {
@@ -179,12 +237,23 @@ $color3: #6C7279;
         width: 100%;
         border: none;
         background-color: $color2 ;
+        margin-top: 82px;
         @include font(24px, 28px, $font, $color1);
-        font-weight: 700;
-        padding: 16px 10px;
+        font-weight: 900;
+        padding: 26px 0 26px;
+        cursor: pointer;
         text-transform: uppercase;
-        transition: background-color 0.3s linear, box-shadow 0.1s linear;
+        transition:all 0.3s linear;
 
+        @media (max-width:1024px){
+            max-width: 313px;
+            padding: 24.5px 0 24.5px;
+         }
+     
+         @media (max-width:767px){
+            max-width: 100%;
+            padding: 15px 0 15px;
+         }
     }
 
     &__button:hover {
@@ -195,11 +264,20 @@ $color3: #6C7279;
         box-shadow: 4px 4px 30px #FF4343;
         background-color: $color2;
     }
+
 }
 
 .features {
 
     margin-bottom: 116px;
+
+    @media (max-width:1024px){
+        margin-bottom: 80px;
+    }
+
+    @media (max-width:767px){
+        margin-bottom: 55px;
+    }
 
     &__container {
         display: grid;
@@ -207,10 +285,10 @@ $color3: #6C7279;
         gap: 88px 30px;
 
         @media (max-width:1024px) {
-            grid-template-columns: 1fr 1fr 1fr;
+            gap: 49px 12px;
         }
 
-        @media (max-width:320px) {
+        @media (max-width:767px){
             grid-template-columns: 1fr;
         }
     }
@@ -223,6 +301,18 @@ $color3: #6C7279;
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @media (max-width:1024px){
+            width: 69px;
+            height: 81px;
+            margin: 0 auto 23px;
+        }
+
+        @media (max-width:767px){
+            width: 62px;
+            height: 65px;
+            margin: 0 auto 21.72px;
+        }
     }
 
     &__title {
@@ -241,13 +331,27 @@ $color3: #6C7279;
 }
 
 
+
 .work {
 
-    padding-bottom: 114px;
+    margin-bottom: 114px;
+
+    @media(max-width:1024px) {
+        margin-bottom: 79px;
+    }
+
+    @media(max-width:767px) {
+        margin-bottom: 35px;
+    }
 
     &__container {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
+        gap:2px;
+
+        @media(max-width:767px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 
     &__section {
@@ -277,7 +381,7 @@ $color3: #6C7279;
         background-color: transparent;
         align-items: center;
         padding: 10px;
-        transition: 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
 
         &:hover {
             background: rgba(255, 67, 67, 0.8);
@@ -289,32 +393,89 @@ $color3: #6C7279;
     &__title {
         @include font(24px, 28px, $font, $color1);
         margin-bottom: 21px;
+        text-transform: uppercase;
+        font-weight: 900;
+
+        @media (max-width:1024px){
+            @include font(18px, 21px, $font, $color1);
+            margin-bottom: 12.81px;
+        }
+
+        @media (max-width:767px){
+            margin-bottom: 4.63px;
+        }
     }
 
     &__text {
         @include font(18px, 21px, $font, $color1);
+
+        @media (max-width:1024px){
+            @include font(14px, 16px, $font, $color1);
+        }
     }
 }
 
 .team {
     margin-bottom: 124px;
 
+    @media (max-width:767px){
+        margin-bottom: 41px;
+    }
+
     &__container {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
+        gap: 0 30px;
+
+        @media (max-width:1024px) {
+            padding: 0 19px;
+            gap:0 25px;
+        }
+
+        @media (max-width:767px) {
+            display: flex;
+            flex-direction: column;
+            row-gap: 49.39;
+            align-items: center;
+        }
+    }
+
+    &__block{
+        @media (max-width:767){
+            max-width: 280px;
+        }
+    }
+
+    &__wrapper-img{
+        max-width: 270px;
+        overflow: hidden;
+        margin-bottom: 30px;
+
+        @media (max-width:1024px) {
+            max-width: 234px;
+            margin-bottom: 27px;
+        }
+
+        @media (max-width:767px) {
+            max-width: 100%;
+        }
     }
 
     &__img {
         object-fit: cover;
         max-width: 270px;
         width: 100%;
-        margin-bottom: 30px;
     }
 
     &__title {
         @include font(24px, 28px, $font, #2D3033);
-        font-weight: bold;
+        font-weight: 700;
         margin-bottom: 5px;
+
+        @media (max-width:1024px) {
+            @include font(18px, 21px, $font, #2D3033);
+            margin-bottom: 4.6px;
+        }
     }
 
     &__second-title {
@@ -322,16 +483,42 @@ $color3: #6C7279;
         text-transform: uppercase;
         font-weight: 400;
         margin-bottom: 18px;
+
+        @media (max-width:1024px) {
+            @include font(14px, 16px, $font, $color2);
+            margin-bottom: 22.45px;
+        }
+
+        @media (max-width:767px) {
+            margin-bottom: 36.64px;
+        }
     }
 
     &__text {
         @include font(18px, 21px, $font, #6C7279);
         margin-bottom: 38px;
+
+        @media (max-width:1024px){
+            @include font(14px, 16px, $font, #6C7279);
+            margin-bottom: 39.2px;
+        }
+
+        @media (max-width:767px){
+            margin-bottom: 57px;
+        }
     }
 
     &__link-desk {
         display: flex;
         column-gap: 5px;
+
+        @media (max-width:1024px) {
+            column-gap: 5.05px;
+        }
+
+        @media (max-width:767px) {
+            column-gap:  5.08px;
+        }
     }
 
     &__wrapper-link {
@@ -342,6 +529,17 @@ $color3: #6C7279;
         align-items: center;
         justify-content: center;
         transition: border .7s linear;
+
+        @media (max-width:1024px){
+            width:32.8px ;
+            height:32.8px ;
+        }
+
+        @media (max-width:767px){
+            width:39.61px ;
+            height:39.61px ;
+            margin-bottom: 49.39px;
+        }
 
         &:hover {
             border: solid 1px #FF4343;
@@ -371,6 +569,15 @@ $color3: #6C7279;
 
 .swipe {
     margin-bottom: 104px;
+
+    @media (max-width:1024px){
+        margin-bottom: 77.51px;
+    }
+
+    @media (max-width:767px){
+        margin-bottom: 34.51px;
+    }
+
 
     .swiper{
         padding-bottom: 45px;
@@ -408,6 +615,10 @@ $color3: #6C7279;
         justify-content: space-between;
         max-width: 100%;
         padding:0;
+
+        @media (max-width:767px){
+            grid-template-columns: repeat(1,1fr);
+        }
     }
 
     &__img-wrapper{
@@ -427,7 +638,6 @@ $color3: #6C7279;
 
 
     &__wrapper-text {
-        padding: 133px 170px 110px 129px;
         overflow: hidden;
         background-color: #5C3249;
         display: flex;
@@ -436,28 +646,85 @@ $color3: #6C7279;
         width: 100%;
         height: 100%;
         padding: 10px 16.525%;
+
+        @media (max-width:1024px){
+            display: block;
+            padding: 60px 16.525%;
+        }
+
+        @media (max-width:767px){
+            display: flex;
+            padding:23px 24px 100.5px 20px;
+            align-items: center;
+            text-align: center;
+            row-gap: 28px;
+        }
+
     }
 
     &__text {
         @include font(36px, 49px, $font-testimonials, $color1);
         font-weight: 400;
         margin-bottom: 17px;
+        max-width: 471px;
+
+        @media (max-width:1024px) {
+            @include font(24px, 32px, $font-testimonials, $color1);
+            max-width: 330px;
+        }
+
+        @media (max-width:767px) {
+            max-width: 100%;
+            margin: 0;
+        }
+
+
     }
 
     &__author {
         @include font(13px, 15px, $font, $color1);
         text-transform: uppercase;
+        font-weight: 700;
+        max-width: 471px;
+
+        @media (max-width:1024px){
+            @include font(12px, 14px, $font, $color1);
+            max-width: 330px;
+        }
+
+        @media (max-width:767px){
+            max-width: 100%;
+        }
+
     }
 }
 
 .download {
     margin-bottom: 114px;
 
+    @media (max-width:1024px){
+        margin-bottom: 78px;
+    }
+
+    @media (max-width:767px){
+        margin-bottom: 45px;
+    }
+
     &__title {
         @include font(30px, 35px, $font, #000000);
         font-weight: 500;
         text-align: center;
-        margin-bottom: 11px;
+        margin-bottom: 22px;
+
+        @media (max-width:1024px){
+            @include font(24px, 28px, $font, #000000);
+            margin-bottom: 20.71px;
+        }
+
+        @media (max-width:767px){
+            @include font(18px, 21px, $font, #000000);
+            margin-bottom: 31px;
+        }
     }
 
     &__text {
@@ -465,6 +732,16 @@ $color3: #6C7279;
         font-weight: 700;
         text-align: center;
         margin-bottom: 48px;
+
+        @media (max-width:1024px){
+            @include font(14px, 16px, $font, #000000);
+            margin-bottom: 45.29px;
+        }
+
+        @media (max-width:767px){
+            @include font(13px, 15px, $font, #000000);
+            margin-bottom: 13px;
+        }
     }
 
     &__button {
@@ -474,11 +751,23 @@ $color3: #6C7279;
         width: 100%;
         border: none;
         background-color: $color2 ;
+        margin-top: 82px;
         @include font(24px, 28px, $font, $color1);
-        font-weight: 700;
-        padding: 16px 10px;
+        font-weight: 900;
+        padding: 26px 0 26px;
+        cursor: pointer;
         text-transform: uppercase;
-        transition: background-color 0.3s linear, box-shadow 0.1s linear;
+        transition:all 0.3s linear;
+
+        @media (max-width:1024px){
+            max-width: 313px;
+            padding: 24.5px 0 24.5px;
+         }
+     
+         @media (max-width:767px){
+            max-width: 100%;
+            padding: 15px 0 15px;
+         }
     }
 
     &__button:hover {
@@ -489,11 +778,11 @@ $color3: #6C7279;
         box-shadow: 4px 4px 30px #FF4343;
         background-color: $color2;
     }
-
 }
 
 .footer {
     background-color: #353C65;
+    padding-top: 71px;
 
     &__second {
         display: flex;
@@ -507,8 +796,18 @@ $color3: #6C7279;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 0 30px;
-        padding-top: 71px;
-        padding-bottom: 71px;
+        margin-bottom: 71px;
+
+        @media (max-width:1024px){
+            gap:0 20px;
+            margin-bottom: 41.19px;
+        }
+
+        @media (max-width:767px){
+            grid-template-columns: repeat(1,1fr);
+            margin-bottom: 33.14px;
+            row-gap: 66px;
+        }
     }
 
     &__title {
@@ -516,22 +815,50 @@ $color3: #6C7279;
         font-weight: 700;
         text-align: center;
         margin-bottom: 29px;
+        text-transform: uppercase;
+
+        @media (max-width:1024px){
+            @include font(14px, 16px, $font, $color1);
+            margin-bottom:17.72px;
+        }
+
+        @media (max-width:767px){
+            margin-bottom:34px;
+        }
     }
 
     &__title_2 {
         margin-bottom: 49px;
+
+        @media (max-width:1024px){
+            margin-bottom:32.51px;
+        }
+
+        @media (max-width:767px){
+            margin-bottom:36.71px;
+        }
+
     }
 
     &__text {
         @include font(18px, 21px, $font, $color1);
         text-align: center;
+
+
     }
 
     &__link-desk {
         display: flex;
-        column-gap: 5px;
         justify-content: center;
         column-gap: 27px;
+
+        @media (max-width:1024px){
+            column-gap: 23.01px;
+        }
+
+        @media (max-width:767px){
+            column-gap: 16.01px;
+        }
     }
 
     &__wrapper-link {
@@ -541,7 +868,13 @@ $color3: #6C7279;
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: border .7s linear;
+        transition: all .7s linear;
+
+        @media (max-width:1024px){
+            width: 33px;
+            height: 33px;
+        }
+
 
         &:hover {
             border: solid 1px #FF4343;
@@ -573,6 +906,15 @@ $color3: #6C7279;
         width: 100%;
         @include font(18px,21px,$font,#808080);
         text-align:center;
+
+        @media (max-width:1024px){
+            @include font(14px,16px,$font,#808080);
+            max-width: 314px;
+        }
+
+        @media (max-width:1024px){
+            max-width: 280px;
+        }
     }
 
     span{
