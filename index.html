@@ -6,15 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/style.scss">
-    <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <title>TMS2</title>
 </head>
 
@@ -69,9 +64,19 @@
                 </ul>
             </nav>
             <div class="header__menu">
-                <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <button class="header__burger-button"><svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 0H24V3H0V0ZM0 7.5H24V10.5H0V7.5ZM0 15H24V18H0V15Z" fill="white" />
                 </svg>
+                </button>
+                <nav class="header__burger-menu">
+                    <ul class="header__burger-list">
+                        <li><a class="header__burger-link" href="#">features</a></li>
+                        <li><a class="header__burger-link" href="#">works</a></li>
+                        <li><a class="header__burger-link" href="#">our team</a></li>
+                        <li><a class="header__burger-link" href="#">testimonials</a></li>
+                        <li><a class="header__burger-link" href="#">download</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
 
@@ -569,6 +574,7 @@
                     </div>
                 </div>
     </footer>
+    <script src="burger.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         const swiper = new Swiper('.swiper-review', {

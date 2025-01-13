@@ -80,6 +80,29 @@
     display: flex;
   }
 }
+.header__burger-button {
+  background-color: transparent;
+  border: none;
+}
+.header__burger-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: gray;
+  padding: 10px;
+  z-index: 1000;
+}
+.header__burger-menu.active {
+  display: block;
+}
+.header__burger-list {
+  list-style-type: none;
+}
+.header__burger-link {
+  text-decoration: none;
+  color: red;
+}
 .header__list {
   display: flex;
   list-style-type: none;

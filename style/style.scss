@@ -11,6 +11,7 @@ $color3: #6C7279;
     box-sizing: border-box;
 }
 
+
 .container {
     max-width: 1200px;
     width: 100%;
@@ -93,10 +94,40 @@ $color3: #6C7279;
             background: none;
             border: none;
             display: flex;
+
+          
         }
     }
 
+    &__burger-button{
+        background-color: transparent;
+        border:none;
+    }
 
+
+    &__burger-menu{
+        display: none; 
+        position: absolute; 
+        top: 100%; 
+        right: 0; 
+        background-color: gray; 
+        padding: 10px;
+        z-index: 1000; 
+    }
+
+    &__burger-menu.active {
+        display: block;
+    }
+
+
+    &__burger-list{
+        list-style-type: none;
+    }
+    
+    &__burger-link{
+        text-decoration: none;
+        color:red;
+    }
 
 
 
